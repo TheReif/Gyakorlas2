@@ -33,13 +33,13 @@ public partial class StudiesContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nyomi\\Desktop\\szopeng\\3.zh\\Gyakorlas2\\Gyakorlas2\\Database1.mdf;Integrated Security=True");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\TADLI\\Source\\Repos\\Gyakorlas2\\Gyakorlas2\\Database1.mdf;Integrated Security=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Course>(entity =>
         {
-            entity.HasKey(e => e.CourseSk).HasName("PK__Course__C92D8C4809547A9C");
+            entity.HasKey(e => e.CourseSk).HasName("PK__Course__C92D8C48AD2B7DA4");
 
             entity.ToTable("Course");
 
@@ -52,7 +52,7 @@ public partial class StudiesContext : DbContext
 
         modelBuilder.Entity<Day>(entity =>
         {
-            entity.HasKey(e => e.DayId).HasName("PK__Day__BF3DD825236F06D4");
+            entity.HasKey(e => e.DayId).HasName("PK__Day__BF3DD825D193B8F1");
 
             entity.ToTable("Day");
 
@@ -64,7 +64,7 @@ public partial class StudiesContext : DbContext
 
         modelBuilder.Entity<Employement>(entity =>
         {
-            entity.HasKey(e => e.EmployementId).HasName("PK__Employem__BFBFF076E0EE532C");
+            entity.HasKey(e => e.EmployementId).HasName("PK__Employem__BFBFF07613D6FAC0");
 
             entity.ToTable("Employement");
 
@@ -78,7 +78,7 @@ public partial class StudiesContext : DbContext
 
         modelBuilder.Entity<Instructor>(entity =>
         {
-            entity.HasKey(e => e.InstructorSk).HasName("PK__Instruct__9D017A28EAF5BFCF");
+            entity.HasKey(e => e.InstructorSk).HasName("PK__Instruct__9D017A28C8E1616A");
 
             entity.ToTable("Instructor");
 
@@ -103,7 +103,7 @@ public partial class StudiesContext : DbContext
 
         modelBuilder.Entity<Lesson>(entity =>
         {
-            entity.HasKey(e => e.LessonSk).HasName("PK__Lesson__B08512E2FD092046");
+            entity.HasKey(e => e.LessonSk).HasName("PK__Lesson__B08512E2A9844BB5");
 
             entity.ToTable("Lesson");
 
@@ -137,7 +137,7 @@ public partial class StudiesContext : DbContext
 
         modelBuilder.Entity<Room>(entity =>
         {
-            entity.HasKey(e => e.RoomSk).HasName("PK__Room__328616CF0644B184");
+            entity.HasKey(e => e.RoomSk).HasName("PK__Room__328616CFB851A6ED");
 
             entity.ToTable("Room");
 
@@ -147,7 +147,7 @@ public partial class StudiesContext : DbContext
 
         modelBuilder.Entity<Status>(entity =>
         {
-            entity.HasKey(e => e.StatusId).HasName("PK__Status__C8EE2043B84A91EC");
+            entity.HasKey(e => e.StatusId).HasName("PK__Status__C8EE2043C02E00B2");
 
             entity.ToTable("Status");
 
@@ -157,7 +157,7 @@ public partial class StudiesContext : DbContext
 
         modelBuilder.Entity<Time>(entity =>
         {
-            entity.HasKey(e => e.TimeId).HasName("PK__Time__E04ED967EBA864C5");
+            entity.HasKey(e => e.TimeId).HasName("PK__Time__E04ED967949B1974");
 
             entity.ToTable("Time");
 
